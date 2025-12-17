@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import GymButton from './GymButton';
 import profileImg from '../assets/profile.jpg';
 
-const Hero = () => {
+const Front = () => {
     return (
         <section style={styles.heroSection}>
             <div style={styles.container}>
@@ -159,4 +159,4 @@ const styles = {
     }
 };
 
-export default Hero;
+export default Front;
