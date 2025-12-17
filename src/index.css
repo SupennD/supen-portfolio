@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Green/White Theme Palette */
+  --bg-color: #e5e7eb;
+  /* Very light cool grey/white */
+  --surface-color: #ffffff;
+  /* Pure White for cards */
+  --text-primary: #111827;
+  /* Near Black */
+  --text-secondary: #4b5563;
+  /* Dark Grey */
+
+  /* Accents */
+  --accent-color: #16a34a;
+  /* Forest Green */
+  --accent-hover: #15803d;
+  /* Darker Green */
+  --accent-light: #dcfce7;
+  /* Very light green for backgrounds */
+
+  --gym-plate-color: #f3f4f6;
+  /* Light Grey for secondary buttons */
+  --gym-plate-text: #374151;
+
+  --font-main: 'Inter', sans-serif;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Global Button Styles */
+.show-more-btn {
+  background: none;
+  border: 2px solid var(--accent-color);
+  border-radius: 2rem;
+  color: var(--accent-color);
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.show-more-btn:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
