@@ -16,13 +16,13 @@ const Projects = () => {
         {
             title: "SEP4 Backend",
             desc: "Cloud-hosted IoT greenhouse system with backend services and machine learning for predictive monitoring and automation.",
-            tech: ["Java", "Spring Boot", "PostgreSQL", "Docker"],
+            tech: ["Java", "Spring Boot", "MongoDB", "Docker"],
             link: "https://github.com/SupennD/SEP4-backend"
         },
         {
             title: "Shared Calendar",
             desc: "Personal project with a Group-based event management system. Responsive UI with Blazor and a .NET Web API backend.",
-            tech: ["Blazor", "C#", ".NET Web API", "SQL"],
+            tech: ["Blazor", "C#", ".NET Web API", "SQL Lite"],
             link: "https://github.com/SupennD/Shared_Calendar"
         },
         {
@@ -33,14 +33,14 @@ const Projects = () => {
         },
         {
             title: "Semester 2 Bingo Game",
-            desc: "Favorite one as Interactive bingo board game where 4 players compete to make the combination and make bingo developed as a semester project.",
+            desc: "Favorite one!! as Interactive bingo board game where 4 players compete to make the combination and make bingo developed as a semester project.",
             tech: ["Java", "JavaFX", "Design Patterns"],
             link: "https://github.com/SupennD/Semester2_BingoGame"
         },
         {
             title: "Job Platform",
             desc: "3-tier distributed system helping students find jobs. Features a Java Spring Boot data tier and .NET Blazor client.",
-            tech: ["Java Spring Boot", ".NET Blazor", "Distributed Systems"],
+            tech: ["Java Spring Boot", ".NET Blazor", "Distributed Systems", "PostgreSQL"],
             link: "https://github.com/SupennD/Sem3-JobPlatform"
         }
     ];

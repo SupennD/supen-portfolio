@@ -30,9 +30,9 @@ const Header = () => {
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
                 <span style={{ marginRight: '0.5rem', display: 'flex', alignItems: 'center' }}>
-                    <HatIcon />
+                    <HatIcon style={{ width: '60px', height: '60px' }} />
                 </span>
-                Supendra Bogati
+                <span style={{ fontSize: '1.5rem', fontWeight: 'italic' }}>SDB</span>
             </motion.div>
 
             {/* Desktop Navigation */}

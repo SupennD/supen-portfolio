@@ -37,7 +37,7 @@ const Skills = () => {
                 { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
                 { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
                 { name: "Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
-                { name: "Scrum", icon: "/scrum.png" }
+                { name: "Scrum", icon: "https://thenounproject.com/icon/scrum-376069/" }
             ]
         },
         {

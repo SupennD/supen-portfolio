@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer style={styles.footer}>
             <p style={styles.copy}>
-                &copy; {new Date().getFullYear()} <span style={{ color: 'var(--accent-color)' }}>Supendra Bogati</span>. All rights reserved.
+                &copy; {new Date().getFullYear()} <span style={{ color: 'var(--accent-color)' }}>SDB</span>. All rights reserved.
             </p>
         </footer>
     );

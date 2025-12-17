@@ -11,13 +11,13 @@ const Loader = () => {
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                 style={styles.icon}
             >
-                <HatIcon style={{ width: '80px', height: '80px' }} />
+                <HatIcon />
             </motion.div>
             <motion.div style={styles.barContainer}>
                 <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: '100%' }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
+                    transition={{ duration: 1, ease: "easeInOut" }}
                     style={styles.bar}
                 />
             </motion.div>
@@ -42,7 +42,7 @@ const styles = {
     },
     icon: {
         fontSize: '4rem',
-        marginBottom: '2rem',
+        marginBottom: '0.2rem',
     },
     barContainer: {
         width: '200px',
