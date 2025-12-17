@@ -1,10 +1,13 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import HatIcon from './HatIcon';
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navItems = ['Projects', 'About', 'Skills', 'Contact'];
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
         <header style={styles.header}>
@@ -31,7 +34,9 @@ const Header = () => {
                 </span>
                 Supendra Bogati
             </motion.div>
-            <nav>
+
+            {/* Desktop Navigation */}
+            <nav className="desktop-nav">
                 <ul style={styles.navList}>
                     {navItems.map((item, index) => (
                         <motion.li
@@ -47,6 +52,37 @@ const Header = () => {
                     ))}
                 </ul>
             </nav>
+
+            {/* Mobile Navigation Toggle */}
+            <div className="mobile-nav-toggle" onClick={toggleMenu} style={styles.hamburger}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    {isMenuOpen ? (
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    ) : (
+                        <path d="M3 12h18M3 6h18M3 18h18" />
+                    )}
+                </svg>
+            </div>
+
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        style={styles.mobileMenu}
+                    >
+                        <ul style={styles.mobileNavList}>
+                            {navItems.map((item) => (
+                                <li key={item} onClick={() => setIsMenuOpen(false)} style={{ width: '100%', textAlign: 'center' }}>
+                                    <a href={`#${item.toLowerCase()}`} style={styles.mobileNavLink}>{item}</a>
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     );
 };
@@ -56,14 +92,15 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '1.5rem 4rem',
-        backgroundColor: 'rgba(248, 250, 252, 0.9)', // Matches var(--bg-color) with opacity
+        padding: '1.5rem 2rem', // Reduced padding for better fit on smaller screens
+        backgroundColor: 'rgba(248, 250, 252, 0.95)',
         position: 'fixed',
         width: '100%',
         top: 0,
         zIndex: 1000,
         backdropFilter: 'blur(10px)',
         borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+        flexWrap: 'wrap', // Allow wrapping for mobile menu
     },
     logo: {
         fontSize: '1.2rem',
@@ -72,11 +109,12 @@ const styles = {
         display: 'flex',
         alignItems: 'center',
         cursor: 'pointer',
+        zIndex: 1001, // Keep logo above menu if needed
     },
     navList: {
         display: 'flex',
         listStyle: 'none',
-        gap: '2.5rem',
+        gap: '2rem',
     },
     navItem: {
         cursor: 'pointer',
@@ -86,6 +124,38 @@ const styles = {
         fontSize: '0.95rem',
         fontWeight: '500',
         transition: 'color 0.2s ease',
+    },
+    hamburger: {
+        cursor: 'pointer',
+        color: 'var(--text-primary)',
+        zIndex: 1001,
+        padding: '0.5rem',
+    },
+    mobileMenu: {
+        position: 'absolute',
+        top: '100%',
+        left: 0,
+        width: '100%',
+        backgroundColor: 'rgba(248, 250, 252, 0.98)',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.05)',
+        overflow: 'hidden',
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+    },
+    mobileNavList: {
+        listStyle: 'none',
+        padding: '1rem 0',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '1rem',
+    },
+    mobileNavLink: {
+        color: 'var(--text-primary)',
+        fontSize: '1.1rem',
+        fontWeight: '600',
+        display: 'block',
+        padding: '0.5rem 2rem',
+        width: '100%',
     }
 };
 

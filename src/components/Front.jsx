@@ -113,8 +113,9 @@ const styles = {
     },
     imageWrapper: {
         position: 'relative',
-        width: '350px',
-        height: '450px', // Portrait aspect ratio
+        width: '100%',
+        maxWidth: '350px',
+        aspectRatio: '350/450', // Maintain aspect ratio
         borderRadius: '2rem',
         boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
     },

@@ -56,12 +56,13 @@ const About = () => {
             <div style={styles.container}>
 
                 {/* Section 1: My Vision */}
-                <div style={styles.row}>
+                <div style={styles.row} className="about-row">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ amount: 0.2 }}
                         style={styles.textCol}
+                        className="about-text-col"
                     >
                         <h2 style={styles.heading}>My <span style={styles.highlight}>Vision</span></h2>
                         <p style={styles.text}>
@@ -80,6 +81,7 @@ const About = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ amount: 0.2 }}
                         style={styles.visualCol}
+                        className="about-visual-col"
                     >
                         {/* Abstract Tech Animation */}
                         <div style={styles.techVisual}>
@@ -99,12 +101,13 @@ const About = () => {
                 </div>
 
                 {/* Section 2: Beyond Code (Hobbies) */}
-                <div style={{ ...styles.row, flexDirection: 'row-reverse', marginTop: '6rem' }}>
+                <div style={{ ...styles.row, marginTop: '6rem' }} className="about-row reverse">
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ amount: 0.2 }}
                         style={styles.textCol}
+                        className="about-text-col"
                     >
                         <h2 style={styles.heading}>Beyond <span style={styles.highlight}>Code</span></h2>
                         <p style={styles.text}>
@@ -120,6 +123,7 @@ const About = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ amount: 0.2 }}
                         style={styles.visualCol}
+                        className="about-visual-col"
                     >
                         <div style={styles.hobbyVisual}>
                             {/* Gym Animation */}

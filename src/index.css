@@ -101,3 +101,45 @@ a:hover {
   background-color: var(--accent-color);
   color: white;
 }
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-nav-toggle {
+    display: flex !important;
+  }
+
+  .about-row {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 2rem !important;
+  }
+  
+  .about-visual-col {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .about-text-col {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  /* Ensure visual comes after text in column mode even if it was row-reverse */
+  .about-row.reverse {
+    flex-direction: column !important; 
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav-toggle {
+    display: none !important;
+  }
+  
+  .about-row.reverse {
+    flex-direction: row-reverse !important;
+  }
+}
