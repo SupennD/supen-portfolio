@@ -20,7 +20,7 @@ const Contact = () => {
 
             // Reset status after 5 seconds
             setTimeout(() => setStatus('idle'), 5000);
-        } catch (error) {
+        } catch {
             setStatus('error');
         }
     };

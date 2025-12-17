@@ -1,16 +1,49 @@
-# React + Vite
+# Supen Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with React and Vite. This project showcases my skills, projects, and professional background with a clean, dynamic user interface.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Animations**: Smooth transitions and effects using Framer Motion.
+- **Responsive Design**: Fully optimized for all device sizes (Desktop, Tablet, Mobile).
+- **Interactive Components**: Engaging UI elements like project cards, skill badges, and a contact form.
+- **Modern Tech Stack**: Built with the latest web technologies for performance and maintainability.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework**: [React](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: CSS Modules / Vanilla CSS with variables
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/SupennD/supen-portfolio.git
+    cd supen-portfolio
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
+
+## 🤝 Contact
+
+Feel free to reach out if you want to collaborate or just say hi!
+
+- **Email**: [supendradbogati@gmail.com](mailto:supendradbogati@gmail.com)
+- **LinkedIn**: [Supendra Bogati](https://www.linkedin.com/in/supen/)
+- **GitHub**: [SupennD](https://github.com/SupennD)
