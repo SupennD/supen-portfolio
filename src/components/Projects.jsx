@@ -15,13 +15,13 @@ const Projects = () => {
         },
         {
             title: "SEP4 Backend",
-            desc: "Backend infrastructure for a semester project involving IoT data handling.",
+            desc: "Cloud-hosted IoT greenhouse system with backend services and machine learning for predictive monitoring and automation.",
             tech: ["Java", "Spring Boot", "PostgreSQL", "Docker"],
             link: "https://github.com/SupennD/SEP4-backend"
         },
         {
             title: "Shared Calendar",
-            desc: "Group-based event management system. Responsive UI with Blazor and a .NET Web API backend.",
+            desc: "Personal project with a Group-based event management system. Responsive UI with Blazor and a .NET Web API backend.",
             tech: ["Blazor", "C#", ".NET Web API", "SQL"],
             link: "https://github.com/SupennD/Shared_Calendar"
         },
@@ -33,7 +33,7 @@ const Projects = () => {
         },
         {
             title: "Semester 2 Bingo Game",
-            desc: "Interactive bingo game developed as a semester project.",
+            desc: "Favorite one as Interactive bingo board game where 4 players compete to make the combination and make bingo developed as a semester project.",
             tech: ["Java", "JavaFX", "Design Patterns"],
             link: "https://github.com/SupennD/Semester2_BingoGame"
         },
