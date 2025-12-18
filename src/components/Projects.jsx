@@ -78,6 +78,10 @@ const Projects = () => {
                             key={project.title}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
+                            whileHover={{
+                                y: -6,
+                                boxShadow: '0 16px 35px rgba(0, 0, 0, 0.15)',
+                            }}
                             viewport={{ amount: 0.2 }}
                             transition={{ delay: index * 0.1 }}
                             style={styles.card}
@@ -128,13 +132,15 @@ const styles = {
     },
     card: {
         backgroundColor: 'var(--surface-color)',
-        borderRadius: '0.5rem',
+        borderRadius: '0.75rem',
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
-        border: '1px solid rgba(0, 0, 0, 0.05)',
-        boxShadow: '0 4px 6px rgba(0,0,0,0.02)',
+        border: '1px solid rgba(0, 0, 0, 0.06)',
+        boxShadow: '0 8px 20px rgba(0, 0, 0, 0.08)',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease',
     },
+
     content: {
         padding: '2rem',
         flex: 1,
