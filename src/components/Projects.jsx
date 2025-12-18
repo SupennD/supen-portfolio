@@ -16,7 +16,7 @@ const Projects = () => {
         {
             title: "SEP4 Backend",
             desc: "Cloud-hosted IoT greenhouse system with backend services and machine learning for predictive monitoring and automation.",
-            tech: ["Java", "Spring Boot", "MongoDB", "Docker"],
+            tech: ["Python", "FastAPI", "MongoDB", "Docker", "Machine Learning", "AWS"],
             link: "https://github.com/SupennD/SEP4-backend"
         },
         {

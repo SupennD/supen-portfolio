@@ -11,7 +11,7 @@ const Contact = () => {
         // Simulate sending
         try {
             const subject = `Portfolio Contact from ${formData.name}`;
-            const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+            const body = `Hi, Supendra,%0D%0A%0D%0A${formData.message}%0D%0A%0D%0ARespectfully,%0D%0A${formData.name}%0D%0A%0D%0AContact: ${formData.email}`;
             window.location.href = `mailto:supendradbogati@gmail.com?subject=${subject}&body=${body}`;
 
             // Show success message
