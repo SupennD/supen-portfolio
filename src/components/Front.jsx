@@ -6,7 +6,34 @@ import profileImg from '../assets/profile.jpg';
 const Front = () => {
     return (
         <section style={styles.heroSection}>
-            <div style={styles.container}>
+            <style>{`
+                @media (max-width: 768px) {
+                    .hero-container {
+                        flex-direction: column-reverse !important;
+                        text-align: center !important;
+                        gap: 2rem !important;
+                    }
+                    .hero-image-wrapper {
+                        max-width: 250px !important;
+                        aspect-ratio: 1/1 !important;
+                        border-radius: 50% !important;
+                    }
+                    .hero-profile-image {
+                        border-radius: 50% !important;
+                    }
+                    .hero-button-group {
+                        justify-content: center !important;
+                    }
+                    .hero-bio {
+                        margin-left: auto !important;
+                        margin-right: auto !important;
+                    }
+                    .hero-ring {
+                        display: none !important;
+                    }
+                }
+            `}</style>
+            <div style={styles.container} className="hero-container">
                 {/* Text Content */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
@@ -18,11 +45,11 @@ const Front = () => {
                     <h1 style={styles.name}>Supendra Bogati</h1>
                     <h3 style={styles.role}>Software Engineering Student</h3>
 
-                    <p style={styles.bio}>
+                    <p style={styles.bio} className="hero-bio">
                         A 21-year-old developer with the discipline of a gym rat. I do have a strong foundation in backend logic and frontend design but is always willing to push past limits to learn and grow. Known for my punctuality and ability to learn fast.
                     </p>
 
-                    <div style={styles.buttonGroup}>
+                    <div style={styles.buttonGroup} className="hero-button-group">
                         <GymButton href="#projects">View Projects</GymButton>
                         <GymButton href="#contact" variant="secondary">Contact Me</GymButton>
                     </div>
@@ -35,10 +62,10 @@ const Front = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     style={styles.imageContent}
                 >
-                    <div style={styles.imageWrapper}>
-                        <img src={profileImg} alt="Supendra Bogati" style={styles.profileImage} />
+                    <div style={styles.imageWrapper} className="hero-image-wrapper">
+                        <img src={profileImg} alt="Supendra Bogati" style={styles.profileImage} className="hero-profile-image" />
                         {/* Decorative Ring */}
-                        <div style={styles.ring}></div>
+                        <div style={styles.ring} className="hero-ring"></div>
                     </div>
                 </motion.div>
             </div>
@@ -58,7 +85,7 @@ const styles = {
         justifyContent: 'center',
         position: 'relative',
         overflow: 'hidden',
-        padding: '6rem 2rem 2rem 2rem', // Top padding for fixed header
+        padding: '4rem 2rem 2rem 2rem', // Reduced top padding for smaller header
     },
     container: {
         maxWidth: '1200px',

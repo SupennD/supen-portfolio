@@ -38,6 +38,7 @@ const Skills = () => {
                 { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
                 { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
                 { name: "Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+                { name: "gRPC", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grpc/grpc-original.svg" },
                 { name: "Scrum", icon: scrumIcon }
             ]
         },
@@ -72,6 +73,22 @@ const Skills = () => {
                 >
                     Skills
                 </motion.h2>
+                <motion.div
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ amount: 0.5 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    style={{ ...styles.underline, width: '100px', transformOrigin: 'center' }}
+                />
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ amount: 0.2 }}
+                    transition={{ delay: 0.1 }}
+                    style={styles.subtitle}
+                >
+                    From my engineering studies to work experience, here are the core technical skills and tools I have mastered along my journey.
+                </motion.p>
 
                 <div style={styles.grid}>
                     {skills.map((group, index) => (
@@ -87,7 +104,16 @@ const Skills = () => {
                             <div style={styles.skillList}>
                                 {group.items.map(skill => (
                                     <div key={skill.name} style={styles.skillItem} className="skill-item">
-                                        <img src={skill.icon} alt={skill.name} style={styles.icon} />
+                                        <img
+                                            src={skill.icon}
+                                            alt={skill.name}
+                                            style={{
+                                                ...styles.icon,
+                                                backgroundColor: skill.name === 'gRPC' ? '#111827' : 'transparent',
+                                                borderRadius: skill.name === 'gRPC' ? '8px' : '0',
+                                                padding: skill.name === 'gRPC' ? '4px' : '0'
+                                            }}
+                                        />
                                         <span style={styles.tooltip} className="tooltip">{skill.name}</span>
                                     </div>
                                 ))}
@@ -102,7 +128,7 @@ const Skills = () => {
 
 const styles = {
     section: {
-        padding: '6rem 2rem',
+        padding: '3rem 2rem 6rem 2rem', // Reduced top padding
         backgroundColor: 'var(--surface-color)',
     },
     container: {
@@ -111,19 +137,33 @@ const styles = {
     },
     heading: {
         fontSize: '2.5rem',
-        marginBottom: '3rem',
+        marginBottom: '0.5rem', // Reduced to make room for underline
         textAlign: 'center',
         color: 'var(--text-primary)',
+    },
+    underline: {
+        height: '4px',
+        backgroundColor: 'var(--accent-color)',
+        margin: '0 auto 1.5rem auto',
+        borderRadius: '2px',
+    },
+    subtitle: {
+        fontSize: '1.1rem',
+        color: 'var(--text-secondary)',
+        textAlign: 'center',
+        maxWidth: '700px',
+        margin: '0 auto 2.5rem auto', // Reduced from 3rem
+        lineHeight: '1.6',
     },
     grid: {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-        gap: '2rem',
+        gap: '1.5rem', // Reduced from 2rem
         justifyContent: 'center',
     },
     card: {
         backgroundColor: 'var(--bg-color)',
-        padding: '2rem',
+        padding: '1.5rem', // Reduced from 2rem
         borderRadius: '1rem',
         border: '1px solid rgba(0, 0, 0, 0.05)',
         boxShadow: '0 4px 6px rgba(0,0,0,0.02)',

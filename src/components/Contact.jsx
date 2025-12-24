@@ -47,6 +47,7 @@ const Contact = () => {
                         >
                             Get in <span style={styles.highlight}>Touch</span>
                         </motion.h2>
+
                         <p style={styles.subtext}>
                             Have a project in mind or just want to say hi? My inbox is always open.
                         </p>
@@ -185,6 +186,12 @@ const styles = {
         fontSize: '2.5rem',
         marginBottom: '0.5rem',
         color: '#fff',
+    },
+    underline: {
+        height: '4px',
+        backgroundColor: 'var(--accent-color)',
+        margin: '0 auto 1.5rem auto',
+        borderRadius: '2px',
     },
     highlight: {
         color: 'var(--accent-color)',

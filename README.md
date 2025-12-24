@@ -1,1 +1,1 @@
-This is a responsive personal portfolio website built with React and Vite. This project showcases my skills, projects, and professional background with a clean, dynamic user interface.
+This is a responsive personal portfolio website built with React and Vite.
