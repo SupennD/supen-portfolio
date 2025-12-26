@@ -153,7 +153,7 @@ const About = () => {
                             />
                         </div>
                         <p style={styles.text}>
-                            I am not just a coder who writes lines of code; I am a <span style={styles.bold}>problem-driven developer</span> who focuses on understanding the <span style={styles.bold}>foundation</span> of each challenge before implementing solutions. By combining <span style={styles.bold}>technical depth</span> with <span style={styles.bold}>design thinking</span>, I create clean, maintainable systems that deliver <span style={styles.bold}>meaningful</span> and <span style={styles.bold}>user-focused</span> results.
+                            I am not just a coder who writes lines of code; I am a <span style={styles.bold}>problem-driven developer</span> who focuses on understanding the <span style={styles.bold}>foundation</span> of each challenge before implementing solutions. By doing this, I create clean, maintainable systems that deliver <span style={styles.bold}>meaningful</span> and <span style={styles.bold}>user-focused</span> results.
                         </p>
                         <p style={styles.text}>
                             I value the <span style={styles.bold}>learning process</span> as much as the outcome, using each project to <span style={styles.bold}>deepen my understanding</span> and refine my approach. This mindset allows me to build <span style={styles.bold}>reliable solutions</span> while continuously growing as a developer.
