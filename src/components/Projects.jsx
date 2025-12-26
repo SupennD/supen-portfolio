@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import GymButton from './GymButton';
 import pokedexImg from '../assets/pokedex_full.png';
-import sep4Img from '../assets/sep4_mockup.png';
+import greenhouseImg from '../assets/greenhouse_mockup.png';
 import calendarImg from '../assets/calendar_mockup.png';
 import bingoImg from '../assets/bingo_mockup.png';
 import portfolioImg from '../assets/portfolio_mockup.png';
@@ -21,11 +21,11 @@ const Projects = () => {
             image: pokedexImg
         },
         {
-            title: "SEP4 Backend",
+            title: "Greenhouse System",
             desc: "Cloud-hosted IoT greenhouse system with backend services and machine learning for predictive monitoring and automation.",
             tech: ["Python", "FastAPI", "MongoDB", "Docker", "Machine Learning", "AWS"],
             link: "https://github.com/SupennD/SEP4-backend",
-            image: sep4Img
+            image: greenhouseImg
         },
         {
             title: "Shared Calendar",
