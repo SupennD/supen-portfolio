@@ -2,10 +2,11 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import GymButton from './GymButton';
 import pokedexImg from '../assets/pokedex_full.png';
-import greenhouseImg from '../assets/greenhouse_mockup.png';
+import plantgoImg from '../assets/plantgo_mockup.png';
 import calendarImg from '../assets/calendar_mockup.png';
 import bingoImg from '../assets/bingo_mockup.png';
 import portfolioImg from '../assets/portfolio_mockup.png';
+import jobplatformImg from '../assets/jobplatform_mockup.png';
 
 const Projects = () => {
     const [showAll, setShowAll] = useState(false);
@@ -21,11 +22,11 @@ const Projects = () => {
             image: pokedexImg
         },
         {
-            title: "Greenhouse System",
+            title: "Plant&Go",
             desc: "Cloud-hosted IoT greenhouse system with backend services and machine learning for predictive monitoring and automation.",
             tech: ["Python", "FastAPI", "MongoDB", "Docker", "Machine Learning", "AWS"],
             link: "https://github.com/SupennD/SEP4-backend",
-            image: greenhouseImg
+            image: plantgoImg
         },
         {
             title: "Shared Calendar",
@@ -52,7 +53,8 @@ const Projects = () => {
             title: "Job Platform",
             desc: "3-tier distributed system helping students find jobs. Features a Java Spring Boot data tier and .NET Blazor client.",
             tech: ["Java Spring Boot", ".NET Blazor", "Distributed Systems", "PostgreSQL"],
-            link: "https://github.com/SupennD/Sem3-JobPlatform"
+            link: "https://github.com/SupennD/Sem3-JobPlatform",
+            image: jobplatformImg
         }
     ];
 
@@ -158,7 +160,7 @@ const Projects = () => {
                                             opacity: isActive ? 1 : 0.4,
                                             x: offset * 320, // Wider spread for desktop
                                             zIndex: isActive ? 10 : 5,
-                                            rotateY: offset * 35, // Stronger 3D Perspective
+                                            rotateY: offset * 15, // Subtle 3D Perspective
                                             filter: isActive ? 'none' : 'blur(2px) grayscale(80%)'
                                         }}
                                         transition={{ duration: 0.6, cubicBezier: [0.4, 0, 0.2, 1] }}
@@ -187,25 +189,7 @@ const Projects = () => {
                                             </div>
                                         )}
                                         <div style={styles.content}>
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-                                                <h3 style={{ ...styles.title, margin: 0 }}>{project.title}</h3>
-                                                {isActive && (
-                                                    <motion.span
-                                                        initial={{ opacity: 0, scale: 0.8 }}
-                                                        animate={{ opacity: 1, scale: 1 }}
-                                                        style={{
-                                                            backgroundColor: 'rgba(0, 255, 128, 0.05)',
-                                                            color: 'var(--accent-color)',
-                                                            padding: '2px 8px',
-                                                            borderRadius: '20px',
-                                                            fontSize: '0.6rem',
-                                                            fontWeight: 600,
-                                                            textTransform: 'uppercase',
-                                                            letterSpacing: '0.5px',
-                                                            border: '1px solid rgba(0, 255, 128, 0.15)'
-                                                        }}>Featured</motion.span>
-                                                )}
-                                            </div>
+                                            <h3 style={styles.title}>{project.title}</h3>
                                             <div style={styles.techStack}>
                                                 {project.tech.map(t => <span key={t} style={styles.tag}>{t}</span>)}
                                             </div>

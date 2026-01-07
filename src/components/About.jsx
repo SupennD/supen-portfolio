@@ -13,6 +13,7 @@ const About = () => {
             company: "PPCD | greenStruct · Internship",
             date: "Aug 2025 - Present",
             desc: "As an intern, I contribute to building advanced calculation tools for civil engineers/structural engineers, supporting the creation of smarter and more sustainable infrastructure solutions.",
+            desc2: "I worked as a Full-Stack Developer builting user interfaces using TypeScript and PHP within a SaaS environment, and managing MySQL databases",
             reference: {
                 name: "Benjamin Fester Henningsen (Senior Engineer)",
                 email: "bfh@ppcd.dk"
@@ -327,6 +328,12 @@ const About = () => {
                                                 <p style={styles.company}>{exp.company}</p>
                                                 <p style={styles.date}>{exp.date}</p>
                                                 <p style={styles.desc}>{exp.desc}</p>
+                                                {exp.desc2 && (
+                                                    <>
+                                                        <br />
+                                                        <p style={styles.desc}>{exp.desc2}</p>
+                                                    </>
+                                                )}
                                                 {exp.reference && (
                                                     <div style={styles.reference}>
                                                         <span style={styles.refLabel}>Reference:</span>
@@ -367,7 +374,10 @@ const About = () => {
                                         <p style={styles.company}>VIA University College</p>
                                         <p style={styles.date}>Aug 2023 - Feb 2027</p>
                                         <p style={styles.desc}>
-                                            Learning essential software <span style={styles.bold}>technology</span> <span style={styles.bold}>tools</span> and <span style={styles.bold}>methods</span> in my education to improve my ability to <span style={styles.bold}>create</span> and <span style={styles.bold}>design</span> better software <span style={styles.bold}>solutions</span>. I have specifically selected <span style={styles.bold}>Machine Learning</span> and <span style={styles.bold}>Advanced Mathematics</span> electives for my <span style={styles.bold}>6th</span> and <span style={styles.bold}>7th</span> semesters to <span style={styles.bold}>master AI concepts</span>.
+                                            Currently in my <span style={styles.bold}>6th semester</span>, learning essential software <span style={styles.bold}>technology tools</span> and <span style={styles.bold}>methods</span> to improve my ability to <span style={styles.bold}>create</span> and <span style={styles.bold}>design</span> better software <span style={styles.bold}>solutions</span>.
+                                            <br />
+                                            <br />
+                                            My current courses include <span style={styles.bold}>Machine Learning (MAL2)</span>, <span style={styles.bold}>Linear Algebra</span>, <span style={styles.bold}>Domain Centric Architecture</span>, and <span style={styles.bold}>Cyber Security</span>
                                         </p>
                                     </div>
                                 </div>
