@@ -11,7 +11,7 @@ const About = () => {
         {
             role: "Full-stack Developer",
             company: "PPCD | greenStruct · Internship",
-            date: "Aug 2025 - Present",
+            date: "Aug 2025 - Jan 2026",
             desc: "As an intern, I contribute to building advanced calculation tools for civil engineers/structural engineers, supporting the creation of smarter and more sustainable infrastructure solutions.",
             desc2: "I worked as a Full-Stack Developer builting user interfaces using TypeScript and PHP within a SaaS environment, and managing MySQL databases",
             reference: {
