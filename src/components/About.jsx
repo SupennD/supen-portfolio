@@ -622,6 +622,7 @@ const styles = {
     },
     tabContainer: {
         display: 'inline-flex',
+        gap: '0.5rem',
         backgroundColor: 'rgba(0, 0, 0, 0.04)',
         padding: '0.5rem',
         borderRadius: '0.75rem',
