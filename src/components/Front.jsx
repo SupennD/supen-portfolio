@@ -150,7 +150,7 @@ const styles = {
         width: '100%',
         height: '100%',
         objectFit: 'cover',
-        objectPosition: 'center 20%',
+        objectPosition: 'center top',
         borderRadius: '2rem',
         position: 'relative',
         zIndex: 2,

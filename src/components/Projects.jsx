@@ -18,7 +18,7 @@ const Projects = () => {
             title: "Bazar",
             desc: "A Nepalese marketplace demo for authentic Nepali products, from traditional clothing and festival items to fresh vegetables and food. Features product browsing, cart, and checkout, deployed serverless on Vercel.",
             tech: ["React", "TypeScript", "Express", "Vercel"],
-            link: "https://github.com/SupennD/Bazar",
+            link: "https://bazar-seven-blond.vercel.app/",
             image: bazarImg
         },
         {
@@ -196,7 +196,7 @@ const Projects = () => {
                                             <p style={styles.desc}>{project.desc}</p>
                                             <div style={{ marginTop: 'auto' }}>
                                                 <GymButton href={project.link} style={{ width: '100%', fontSize: '0.85rem', pointerEvents: isActive ? 'auto' : 'none' }}>
-                                                    {project.link?.includes('github.io') ? 'Visit Site' : 'View Code'}
+                                                    {project.link?.includes('github.com') ? 'View Code' : 'View Site'}
                                                 </GymButton>
                                             </div>
                                         </div>
@@ -259,7 +259,7 @@ const Projects = () => {
                                     <p style={styles.desc}>{project.desc}</p>
                                     <div style={{ marginTop: 'auto' }}>
                                         <GymButton href={project.link} style={{ width: '100%', fontSize: '0.9rem' }}>
-                                            {project.link?.includes('github.io') ? 'Visit Site' : 'View Code'}
+                                            {project.link?.includes('github.com') ? 'View Code' : 'View Site'}
                                         </GymButton>
                                     </div>
                                 </div>
@@ -326,16 +326,20 @@ const styles = {
         border: '1px solid rgba(0, 0, 0, 0.08)',
         boxShadow: '0 10px 30px rgba(0, 0, 0, 0.04)',
         transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-        height: '100%',
+        height: '640px', // Fixed so the image/text 50-50 split below has real pixels to divide
         position: 'relative',
     },
     imageContainer: {
         width: '100%',
-        height: '180px', // Fixed height for consistency
+        flex: 1, // Match content's flex:1 so image and text each take 50% of the card
+        minHeight: 0, // Prevent the flex item from growing to the image's intrinsic aspect ratio
         overflow: 'hidden',
         backgroundColor: '#f8fafc',
+        position: 'relative',
     },
     image: {
+        position: 'absolute', // Take the image out of flow so it can't force the container's height
+        inset: 0,
         width: '100%',
         height: '100%',
         objectFit: 'cover', // Ensures image fills container uniformly
@@ -344,8 +348,10 @@ const styles = {
     content: {
         padding: '1.5rem',
         flex: 1,
+        minHeight: 0,
         display: 'flex',
         flexDirection: 'column',
+        overflow: 'hidden',
     },
     title: {
         fontSize: '1.3rem',
@@ -360,8 +366,10 @@ const styles = {
         fontSize: '0.95rem',
         lineHeight: '1.6',
         flex: 1,
-        display: 'block', // Ensure it's not a flexbox that might truncate
-        overflow: 'visible', // Explicitly show all text
+        display: '-webkit-box',
+        WebkitLineClamp: 4, // Cap length so text can't push past its half of the fixed-height card
+        WebkitBoxOrient: 'vertical',
+        overflow: 'hidden',
     },
     techStack: {
         display: 'flex',
@@ -409,7 +417,7 @@ const styles = {
         width: '100%', // Increased width to fit 3 cards
         margin: '2rem auto',
         padding: '0 2rem',
-        minHeight: '550px',
+        minHeight: '800px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -417,7 +425,7 @@ const styles = {
     carouselTrack: {
         position: 'relative',
         width: '100%',
-        height: '480px',
+        height: '640px',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
