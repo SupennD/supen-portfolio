@@ -5,8 +5,8 @@ import pokedexImg from '../assets/pokedex_full.png';
 import plantgoImg from '../assets/plantgo_mockup.png';
 import calendarImg from '../assets/calendar_mockup.png';
 import bingoImg from '../assets/bingo_mockup.png';
-import portfolioImg from '../assets/portfolio_mockup.png';
 import jobplatformImg from '../assets/jobplatform_mockup.png';
+import bazarImg from '../assets/bazar_mockup.png';
 
 const Projects = () => {
     const [showAll, setShowAll] = useState(false);
@@ -14,6 +14,13 @@ const Projects = () => {
     const projectsRef = useRef(null);
 
     const allProjects = [
+        {
+            title: "Bazar",
+            desc: "A Nepalese marketplace demo for authentic Nepali products, from traditional clothing and festival items to fresh vegetables and food. Features product browsing, cart, and checkout, deployed serverless on Vercel.",
+            tech: ["React", "TypeScript", "Express", "Vercel"],
+            link: "https://github.com/SupennD/Bazar",
+            image: bazarImg
+        },
         {
             title: "Pokedex App",
             desc: "A responsive Pokédex built with React, fetching data from PokéAPI. Features pagination and detailed views.",
@@ -34,13 +41,6 @@ const Projects = () => {
             tech: ["Blazor", "C#", ".NET Web API", "SQL Lite"],
             link: "https://github.com/SupennD/Shared_Calendar",
             image: calendarImg
-        },
-        {
-            title: "Personal Portfolio",
-            desc: "This website! A personal portfolio built with React and Vite, featuring custom components and animations.",
-            tech: ["React", "Vite", "Framer Motion"],
-            link: "https://github.com/SupennD/website",
-            image: portfolioImg
         },
         {
             title: "Semester 2 Bingo Game",

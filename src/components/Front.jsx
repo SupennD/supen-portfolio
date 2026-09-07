@@ -46,7 +46,7 @@ const Front = () => {
                     <h3 style={styles.role}>Software Engineering Student</h3>
 
                     <p style={styles.bio} className="hero-bio">
-                        A 21-year-old developer with the discipline of a gym rat. I do have a strong foundation in backend logic and frontend design but is always willing to push past limits to learn and grow. Known for my punctuality and ability to learn fast.
+                        A 22-year-old developer with the discipline of a gym rat. I do have a strong foundation in backend logic and frontend design but is always willing to push past limits to learn and grow. Known for my punctuality and ability to learn fast.
                     </p>
 
                     <div style={styles.buttonGroup} className="hero-button-group">
