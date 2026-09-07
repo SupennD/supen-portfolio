@@ -363,11 +363,11 @@ const styles = {
     desc: {
         color: 'var(--text-secondary)',
         marginBottom: '1.5rem',
-        fontSize: '0.95rem',
-        lineHeight: '1.6',
+        fontSize: '0.85rem',
+        lineHeight: '1.5',
         flex: 1,
         display: '-webkit-box',
-        WebkitLineClamp: 4, // Cap length so text can't push past its half of the fixed-height card
+        WebkitLineClamp: 5, // Cap length so text can't push past its half of the fixed-height card
         WebkitBoxOrient: 'vertical',
         overflow: 'hidden',
     },

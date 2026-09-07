@@ -154,7 +154,7 @@ const About = () => {
                             />
                         </div>
                         <p style={styles.text}>
-                            I am not just a coder who writes lines of code; I am a <span style={styles.bold}>problem-driven developer</span> who focuses on understanding the <span style={styles.bold}>foundation</span> of each challenge before implementing solutions. By doing this, I create clean, maintainable systems that deliver <span style={styles.bold}>meaningful</span> and <span style={styles.bold}>user-focused</span> results.
+                            I am not just a coder who writes lines of code. I am a <span style={styles.bold}>problem-driven developer</span> who focuses on understanding the <span style={styles.bold}>foundation</span> of each challenge before implementing solutions. By doing this, I create clean, maintainable systems that deliver <span style={styles.bold}>meaningful</span> and <span style={styles.bold}>user-focused</span> results.
                         </p>
                         <p style={styles.text}>
                             I value the <span style={styles.bold}>learning process</span> as much as the outcome, using each project to <span style={styles.bold}>deepen my understanding</span> and refine my approach. This mindset allows me to build <span style={styles.bold}>reliable solutions</span> while continuously growing as a developer.
@@ -374,10 +374,10 @@ const About = () => {
                                         <p style={styles.company}>VIA University College</p>
                                         <p style={styles.date}>Aug 2023 - Feb 2027</p>
                                         <p style={styles.desc}>
-                                            Currently in my <span style={styles.bold}>6th semester</span>, learning essential software <span style={styles.bold}>technology tools</span> and <span style={styles.bold}>methods</span> to improve my ability to <span style={styles.bold}>create</span> and <span style={styles.bold}>design</span> better software <span style={styles.bold}>solutions</span>.
+                                            Currently in my <span style={styles.bold}>7th and final semester</span>, working on my <span style={styles.bold}>Bachelor's project</span> with <span style={styles.bold}>PPCD</span>, where I'm building a <span style={styles.bold}>chatbot</span> for the company.
                                             <br />
                                             <br />
-                                            My current courses include <span style={styles.bold}>Machine Learning (MAL2)</span>, <span style={styles.bold}>Linear Algebra</span>, <span style={styles.bold}>Domain Centric Architecture</span>, and <span style={styles.bold}>Cyber Security</span>
+                                            My current courses include <span style={styles.bold}>Data Visualization</span>, <span style={styles.bold}>Statistics</span>, and <span style={styles.bold}>Web3</span> (<span style={styles.bold}>TypeScript</span> and <span style={styles.bold}>JavaScript</span> on both client and server side)
                                         </p>
                                     </div>
                                 </div>
